@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.navbar {
+  height: 80px;
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.scrollable-container {
+  margin-top: 80px; /* Start content below the navbar */
+  height: calc(100vh - 80px); /* Remaining height of the screen minus the navbar */
+  overflow-y: scroll; /* Vertical scroll for content */
+  scroll-snap-type: y mandatory; /* Snap sections into view */
+  scrollbar-width: none; /* For Firefox to hide the scrollbar */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* For Chrome/Safari to hide the scrollbar */
+}
+
+.scroll-section {
+  scroll-snap-align: start; /* Align each section to the start */
+  height: calc(100vh - 80px); /* Each section takes the remaining space below the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px; /* Reduced height for mobile devices */
+  }
+
+  .scrollable-container {
+    margin-top: 50px; /* Adjust content to start below the navbar */
+    height: calc(100vh - 50px); /* Adjust height for the mobile navbar */
+  }
+
+  .scroll-section {
+    height: calc(100vh - 50px); /* Adjust section height for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 50px; /* Further reduce the height for smaller screens */
+  }
+
+  .scrollable-container {
+    margin-top: 50px; /* Adjust content to start below the navbar */
+    height: calc(100vh - 50px); /* Adjust height for the smaller navbar */
+  }
+
+  .scroll-section {
+    height: calc(100vh - 50px); /* Adjust section height for smaller mobile screens */
+  }
+}

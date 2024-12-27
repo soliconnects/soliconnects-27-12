@@ -1,0 +1,86 @@
+.about-us {
+  padding: 3rem 1.5rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #228d22;
+  font-weight: bold;
+}
+
+.about-header p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.highlight {
+  color: #228d22;
+  font-weight: bold;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #228d22;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+}
+
+.section li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  color: #228d22;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Adding responsive styles for mobile */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta p {
+    font-size: 1.125rem;
+  }
+}
